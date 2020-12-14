@@ -106,7 +106,7 @@ function _install_application() {
     mkdir -p "${install_path}"
 
     local result=""
-    result=$( (git clone git@github.com:develt-io/application.git "${install_path}") 2>&1)
+    result=$( (git clone https://github.com/develt-io/application.git "${install_path}") 2>&1)
     if [[ ! -d "${install_path}/.git" ]]; then
         echo "${result}"
         return
